@@ -19,32 +19,28 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-  
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
   }
-  
+
   ::-webkit-scrollbar-track {
     @apply bg-surface;
   }
-  
+
   ::-webkit-scrollbar-thumb {
     @apply bg-primary/30 rounded-full;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-primary/50;
   }
@@ -54,20 +50,23 @@
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .bg-gradient-radial {
     background: radial-gradient(circle, var(--tw-gradient-stops));
   }
-  
+
   .animate-gradient {
     background-size: 200% 200%;
     animation: gradient 8s ease infinite;
   }
-  
+
   @keyframes gradient {
-    0%, 100% {
+
+    0%,
+    100% {
       background-position: 0% 50%;
     }
+
     50% {
       background-position: 100% 50%;
     }
